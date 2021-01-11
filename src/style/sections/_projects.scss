@@ -1,16 +1,27 @@
 #projects {
   background-color: $white-color;
   color: $dark-blue-text;
-  margin-top: -15rem;
-  padding-top: 15rem;
+  margin-top: 0;
+  padding-top: 0rem;
+  margin-bottom: 0rem;
+
 
   @include respond(tab-land) {
     margin-top: 0;
     padding-top: 5rem;
   }
 
+  .section-title{
+    padding-bottom: 2em;
+    padding-top: 2em;
+    @include respond(tab-land){
+      padding-bottom: 2em;
+      padding-top: 2em;
+    }
+  }
+
   .project-wrapper {
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
 
     @include respond(phone) {
       margin-bottom: 0rem;

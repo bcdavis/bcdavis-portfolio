@@ -7,11 +7,18 @@ export const headData = {
   description: '', // e.g: Welcome to my website
 };
 
+export const navData = {
+  path1: 'Home',
+  path2: 'About',
+  path3: 'Projects',
+  path4: 'Contact',
+};
+
 // HERO DATA
 export const heroData = {
-  title: '',
-  name: '',
-  subtitle: '',
+  title: "Hi, I'm",
+  name: 'Ben Davis',
+  subtitle: 'Front-End UI/UX Designer & Developer',
   cta: '',
 };
 
@@ -28,12 +35,12 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'MiniClueTemp.png',
+    title: 'Mini Clue',
+    info: 'In this version of Clue, the only sentient player is the user. Games consist of one player constantly making accusatory guesses in an attempt to narrow down the culprit and can last as short as a minute (or less). Any other players specified cannot play against the user... yet.',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: '', // url for live demo of project
+    repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
   },
   {
     id: nanoid(),

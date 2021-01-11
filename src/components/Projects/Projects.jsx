@@ -7,7 +7,7 @@ import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
 const Projects = () => {
-  const { projects } = useContext(PortfolioContext);
+  const { projects } = useContext(PortfolioContext); // get all projects from data.js?
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -29,6 +29,7 @@ const Projects = () => {
           <Title title="Projects" />
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;
+            // for each project, store its variables to use for rendering
 
             return (
               <Row key={id}>
@@ -36,8 +37,8 @@ const Projects = () => {
                   <Fade
                     left={isDesktop}
                     bottom={isMobile}
-                    duration={1000}
-                    delay={500}
+                    duration={500}
+                    delay={250}
                     distance="30px"
                   >
                     <div className="project-wrapper__text">
@@ -75,8 +76,8 @@ const Projects = () => {
                   <Fade
                     right={isDesktop}
                     bottom={isMobile}
-                    duration={1000}
-                    delay={1000}
+                    duration={500}
+                    delay={250}
                     distance="30px"
                   >
                     <div className="project-wrapper__image">

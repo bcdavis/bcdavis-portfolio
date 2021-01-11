@@ -6,3 +6,23 @@ body {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
+
+// this section of the page holds the nav bar on the left and main content on the right
+main{
+  display: flex;
+  flex-direction: row;
+}
+
+.right-content{
+  margin-left: 260px;
+  width: 100%;
+
+  @include respond(tab-port){
+    margin-left: 220px;
+  }
+
+  @include respond(phone){
+    margin-left: 0;
+  }
+}
+
