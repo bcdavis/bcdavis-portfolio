@@ -88,3 +88,10 @@
   }
   
 }
+
+.md-center{
+  @include respond(tab-land){
+    justify-content: center;
+
+  }
+}

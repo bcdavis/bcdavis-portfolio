@@ -34,7 +34,7 @@ const About = () => {
               </div>
             </Fade>
           </Col> */}
-          <Col className="info-wrapper" md={6} sm={12}>
+          <Col className="info-wrapper" md={10} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
@@ -49,7 +49,7 @@ const About = () => {
                   {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
                 </p>
                 {resume && (
-                  <span className="d-flex mt-3">
+                  <span className="d-flex mt-3 md-center">
                     <a
                       target="_blank"
                       rel="noopener noreferrer"

@@ -5,15 +5,13 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import NavBar from './Nav/Nav';
-import ToggleButton from 'react-bootstrap/ToggleButton'
+//import ToggleButton from 'react-bootstrap/ToggleButton'
 
 import { PortfolioProvider } from '../context/context';
 
 import { heroData, navData, aboutData, projectsData, contactData, footerData } from '../mock/data';
 
-
-
-const App = () => {
+const App1 = () => {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
@@ -92,7 +90,7 @@ const App = () => {
     <>
       <main className="flex-row main-page-container">
         <PortfolioProvider value={{ hero, nav, about, projects, contact, footer }}>
-          <NavBar id="TheNav" />
+          <NavBar />
           <div className="right-content">
             {/* <div id="main2">
               <ToggleButton id="span" onChange={document.getElementById("vert-nav").classList.toggle('responsive')}>
@@ -111,4 +109,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default App1;

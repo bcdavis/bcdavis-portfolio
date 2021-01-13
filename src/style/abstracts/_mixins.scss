@@ -13,6 +13,15 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
 
 */
 @mixin respond($breakpoint) {
+
+  //Phone Landscape
+  @if $breakpoint == phone-land {
+    @media (max-height: 26em) {
+      @content;
+      //0 - 416px
+    }
+  }
+
   // Phone-xs
   @if $breakpoint == phone-xs {
     @media (max-width: 20em) {

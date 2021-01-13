@@ -5,6 +5,11 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+
+  @include respond(phone){
+    overflow-y: scroll;
+    //scroll-behavior: auto;
+  }
 }
 
 // this section of the page holds the nav bar on the left and main content on the right
@@ -14,11 +19,16 @@ main{
 }
 
 .right-content{
-  margin-left: 260px;
+  margin-left: 300px;
   width: 100%;
 
+  @media (max-width: 1400px){
+    margin-left: 240px;
+  }
+
+
   @include respond(tab-port){
-    margin-left: 220px;
+    margin-left: 200px;
   }
 
   @include respond(phone){
