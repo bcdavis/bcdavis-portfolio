@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
@@ -26,7 +27,14 @@ const Contact = () => {
               {btn || "Let's Talk"}
             </a>
           </div>
+
+          <span className="back-to-top">
+            <Link to="hero" smooth duration={1000}>
+              <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
+            </Link>
+          </span>
         </Fade>
+
       </Container>
     </section>
   );

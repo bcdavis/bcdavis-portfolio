@@ -46,7 +46,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Nav navbar={true} className="sidenav" id="vert-nav" as="ul">
+      <Nav navbar={true} className="sidenav menu" id="vert-nav" as="ul">
         <Nav.Item as="li">
           <div id="vert-nav-top">
             <h3>Ben Davis</h3>
@@ -101,7 +101,7 @@ const NavBar = () => {
         <Nav.Item as="li">
           <Link
             className="nav-link to-contact"
-            to="footer"
+            to="contact"
             smooth
             duration={700}
             spy={true}

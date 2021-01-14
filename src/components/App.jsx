@@ -48,12 +48,12 @@ const App1 = () => {
 
   //   }
   //   let observer = new IntersectionObserver(observerFn, observerConfig);
-    
+
   //   let aboutSect= document.getElementById('about');
   //   let projectsSect= document.getElementById('projects');
   //   let heroSect= document.getElementById('hero');
   //   let contactSect= document.getElementById('contact');
-    
+
   //   observer.observe(heroSect);
   //   observer.observe(aboutSect);
   //   observer.observe(projectsSect);
@@ -66,10 +66,9 @@ const App1 = () => {
     setProjects([...projectsData]);
     setContact({ ...contactData });
     setFooter({ ...footerData });
-    setNav({...navData });
+    setNav({ ...navData });
     //setupObserver();
   }, []);
-
 
   // function toggleNav() {
   //   let sidenav = document.getElementById("vert-nav");
@@ -84,12 +83,30 @@ const App1 = () => {
   //   }
   // }
 
-
+  const handleMenuClick = (e) => {
+    console.log(e.currentTarget);
+    //  console.log(e.currentTarget.checked);
+    e.currentTarget.classList.toggle('open');
+    // console.log('checked...?');
+  };
 
   return (
     <>
       <main className="flex-row main-page-container">
         <PortfolioProvider value={{ hero, nav, about, projects, contact, footer }}>
+          {/* <input id="hamburger" type="checkbox" className="hamburger-checkbox" />
+          <label for="hamburger" className="hamburger-label" role="button" aria-labelledby="menu">
+            &#xf0c9;
+          </label> */}
+          <button
+            className="mobile-menu-base-tab"
+            type="button"
+            onClick={(e) => handleMenuClick(e)}
+          >
+            <div className="menu btn2" data-menu="1">
+              <div className="icon"></div>
+            </div>
+          </button>
           <NavBar />
           <div className="right-content">
             {/* <div id="main2">
@@ -107,6 +124,6 @@ const App1 = () => {
       </main>
     </>
   );
-}
+};
 
 export default App1;

@@ -42,6 +42,11 @@
       @include respond(phone) {
         margin-bottom: 2.5rem !important;
       }
+
+      @include respond(tab-port){
+        margin-bottom: 1rem;
+      }
+
       @include respond(tab-land) {
         margin-bottom: 4.8rem;
       }
@@ -88,7 +93,7 @@
   }
 }
 
-
+// Contains all the buttons below a project's description
 .proj-btns{
   display: flex;
   justify-content: space-between;
@@ -102,13 +107,14 @@
 
   @include respond(tab-land) {
     width: fit-content;
-    padding: 0 auto;
+    //padding: 0 auto;
     margin: 0 auto;
-    font-size: calc(inherit - 5%);
-    
+    //font-size: calc(inherit - 5%);
+    padding: 0;
   }
 }
 
+// The divs that hold the 'See Live' and 'Source Code' buttons
 .proj-btns > div {
   display: flex;
   justify-content: space-evenly;
@@ -120,7 +126,7 @@
     margin-top: 2em!important;
   }
   @include respond(tab-land){
-    margin-top: 1.5em!important;
+    margin-top: 1em!important;
   }
   @include respond(tab-port){
     margin-top: 1em!important;
