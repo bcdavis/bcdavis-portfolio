@@ -13,6 +13,15 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
 
 */
 @mixin respond($breakpoint) {
+
+  //Phone Landscape
+  @if $breakpoint == phone-land {
+    @media (max-height: 26em) {
+      @content;
+      //0 - 416px
+    }
+  }
+
   // Phone-xs
   @if $breakpoint == phone-xs {
     @media (max-width: 20em) {
@@ -50,4 +59,78 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
   border: 1.5rem solid #fff;
   border-top: 0;
   border-bottom: 0;
+}
+
+
+// ----------- Mobile Menu Icons -------------- 
+
+@mixin menu-opener($height, $width, $top, $margin-left){
+  z-index: 5;
+  position: fixed;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  top: $top;
+  width: $width;
+  height: $height;
+  margin-left: $margin-left;
+  //left: 0px;
+}
+
+@mixin menu-btn($left, $top) {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  // position: relative;
+  //background-color: rgba(33, 169, 155, 0.543);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  top: $top;
+  left: $left;
+  transition-duration: 0.5s;
+}
+
+@mixin menu-icon($height, $width, $margin-right, $margin-left) {
+  transition-duration: 0.5s;
+  position: relative;
+  height: $height;
+  width: $width;
+  margin-right: $margin-right;
+  margin-left: $margin-left;
+  background-color: $dark;
+}
+
+@mixin menu-icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $dark;
+  content: "";
+  top: $top;
+  left: 0px;
+}
+
+@mixin menu-icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $dark;
+  content: "";
+  top: $top;
+  left: 0px;
+}
+
+@mixin menu-icon-circle($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 2px;
+  border-radius: 100%;
+  background: transparent;
+  border: 4px solid black;
+  left: -15px;
 }

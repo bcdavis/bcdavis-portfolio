@@ -1,16 +1,28 @@
 #projects {
   background-color: $white-color;
   color: $dark-blue-text;
-  margin-top: -15rem;
-  padding-top: 15rem;
+  margin-top: 0;
+  padding-top: 0rem;
+  margin-bottom: 0rem;
+
 
   @include respond(tab-land) {
     margin-top: 0;
     padding-top: 5rem;
   }
 
+  .section-title{
+    padding-bottom: 2em;
+    padding-top: 2em;
+    @include respond(tab-land){
+      padding-bottom: 2em;
+      padding-top: 2em;
+    }
+  }
+
   .project-wrapper {
-    margin-bottom: 15rem;
+    height: fit-content;
+    margin-bottom: 10rem;
 
     @include respond(phone) {
       margin-bottom: 0rem;
@@ -30,6 +42,11 @@
       @include respond(phone) {
         margin-bottom: 2.5rem !important;
       }
+
+      @include respond(tab-port){
+        margin-bottom: 1rem;
+      }
+
       @include respond(tab-land) {
         margin-bottom: 4.8rem;
       }
@@ -73,5 +90,52 @@
         }
       }
     }
+  }
+}
+
+.highlight{
+  color: $primary-color;
+}
+
+// Contains all the buttons below a project's description
+.proj-btns{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding: 0 4%;
+  height: 105%;
+  
+  @include respond(big-desktop){
+    margin-top: 5em;
+  }
+
+  @include respond(tab-land) {
+    width: fit-content;
+    //padding: 0 auto;
+    margin: 0 auto;
+    //font-size: calc(inherit - 5%);
+    padding: 0;
+  }
+}
+
+// The divs that hold the 'See Live' and 'Source Code' buttons
+.proj-btns > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.live-src-btns > a {
+  margin-top: 1.5em;
+  @include respond(big-desktop){
+    margin-top: 2em!important;
+  }
+  @include respond(tab-land){
+    margin-top: 1em!important;
+  }
+  @include respond(tab-port){
+    margin-top: 1em!important;
+  }
+  @include respond(phone){
+    margin-top: 0.8em!important;
   }
 }

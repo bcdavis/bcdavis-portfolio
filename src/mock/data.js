@@ -2,16 +2,23 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
+  title: 'Ben Davis', // e.g: 'Name | Developer'
   lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  description: 'Welcome to my website', // e.g: Welcome to my website
+};
+
+export const navData = {
+  path1: 'Home',
+  path2: 'About',
+  path3: 'Projects',
+  path4: 'Contact',
 };
 
 // HERO DATA
 export const heroData = {
-  title: '',
-  name: '',
-  subtitle: '',
+  title: "Hi, I'm",
+  name: 'Ben Davis',
+  subtitle: 'Front-End UI/UX Designer & Developer',
   cta: '',
 };
 
@@ -28,12 +35,12 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'MiniClueTemp.png',
+    title: 'Mini Clue',
+    info: 'This is a simplified, single-player version of the game Clue. Games consist of one player constantly making accusatory guesses in an attempt to narrow down the culprit and can last as short as a minute (or less). This project was built using <span class="highlight">ReactJS</span>.',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: '', // url for live demo of project
+    repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
@@ -67,16 +74,6 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
       url: '',
     },
@@ -90,5 +87,5 @@ export const footerData = {
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
