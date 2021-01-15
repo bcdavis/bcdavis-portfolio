@@ -121,10 +121,7 @@ const Projects = () => {
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
                       <div>
-                        <p>
-                          {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                        </p>
+                        <p className="mb-4">This is a simplified, single-player version of the game Clue®. Games consist of a user constantly making accusatory guesses in an attempt to narrow down the culprit. This project was built using <span class="highlight">ReactJS</span>.</p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
                       <ButtonGroup toggle vertical className="proj-btns">

@@ -1,1 +1,0 @@
-This just fills the dist folder so it can be seen as "existing".

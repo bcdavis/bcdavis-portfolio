@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  // bottom: 0%;
 
   a {
     display: flex;
@@ -32,6 +33,7 @@
 }
 
 .nav-footer{
+  //background-color: palegreen;
   position: fixed;
   bottom: 0%;
   width: 300px;
@@ -46,14 +48,15 @@
     width: 200px;
   }
 }
-// same .open from _base.scss --> want to open the side nav
-.open {
-  @include respond(phone){ // unneccesary?
-    #vert-nav { 
-      left: 0%;
-    }
-  }
-}
+// // same .open from _base.scss --> want to open the side nav
+// .open {
+//   @include respond(phone){ // unneccesary?
+//     #vert-nav { 
+//       left: 0%;
+//     }
+//   }
+// }
+
 
 
 #vert-nav {
@@ -65,6 +68,7 @@
     //justify-content: flex-start;
     background-color: #f1f1f1;
     height: 100%;
+    transition: all 0.5s ease-in-out 0s;
 
     @media (max-width: 1400px){
       width: 240px;
@@ -78,8 +82,15 @@
     // ---- When in mobile form -- hide nav to the left off-screen
     // When nav is brought in, place it on top of current page content
     @include respond(phone){
-      z-index: 999;
-      left: -100%;
+      z-index: 998;
+      margin-left: -200px;
+    }
+
+    &.sidenav-open{
+      @include respond(phone){
+        margin-left: 0px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.105);
+      }
     }
     // @include respond(phone){
     //   width: 200px;
@@ -235,6 +246,12 @@
   display: none;
   color: black;
 }
+
+// .sidenav-open{
+//   @include respond(phone){
+//     left: 0%;
+//   }
+// }
 
 #main2{
   float: right;

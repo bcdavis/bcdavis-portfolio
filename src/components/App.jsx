@@ -84,10 +84,19 @@ const App1 = () => {
   // }
 
   const handleMenuClick = (e) => {
-    console.log(e.currentTarget);
     //  console.log(e.currentTarget.checked);
     e.currentTarget.classList.toggle('open');
+    console.log(e.currentTarget);
     // console.log('checked...?');
+    const x = document.getElementById('vert-nav');
+    console.log(x);
+
+    if (e.currentTarget.classList.contains('open')){
+      x.classList.add('sidenav-open');
+    }
+    else{
+      x.classList.remove('sidenav-open');
+    }
   };
 
   return (

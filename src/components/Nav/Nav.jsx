@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Nav from 'react-bootstrap/Nav';
+import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import PortfolioContext from '../../context/context';
@@ -47,72 +48,72 @@ const NavBar = () => {
   return (
     <>
       <Nav navbar={true} className="sidenav menu" id="vert-nav" as="ul">
-        <Nav.Item as="li">
-          <div id="vert-nav-top">
-            <h3>Ben Davis</h3>
-            <p>UI/UX Designer & Developer</p>
-          </div>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Link
-            className="nav-link to-hero"
-            to="hero"
-            smooth
-            duration={700}
-            spy={true}
-            offset={-100}
-          >
-            <div>
-              <i className="fa fa-home nav-link__icon" />
+          <Nav.Item as="li">
+            <div id="vert-nav-top">
+              <h3>Ben Davis</h3>
+              <p>UI/UX Designer & Developer</p>
             </div>
-            {path1 || 'Home1'}
-          </Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Link
-            className="nav-link to-about"
-            to="about"
-            smooth
-            duration={700}
-            spy={true}
-            offset={-100}
-          >
-            <div>
-              <i className="fa fa-user nav-link__icon" />
-            </div>
-            {path2 || 'About1'}
-          </Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Link
-            className="nav-link to-projects"
-            to="projects"
-            smooth
-            duration={700}
-            spy={true}
-            offset={-100}
-          >
-            <div>
-              <i className="fa fa-file-code-o nav-link__icon" />
-            </div>
-            {path3 || 'Projects1'}
-          </Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Link
-            className="nav-link to-contact"
-            to="contact"
-            smooth
-            duration={700}
-            spy={true}
-            offset={-100}
-          >
-            <div>
-              <i className="fa fa-paper-plane nav-link__icon" />
-            </div>
-            {path4 || 'Contacts1'}
-          </Link>
-        </Nav.Item>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Link
+              className="nav-link to-hero"
+              to="hero"
+              smooth
+              duration={700}
+              spy={true}
+              offset={-100}
+            >
+              <div>
+                <i className="fa fa-home nav-link__icon" />
+              </div>
+              {path1 || 'Home1'}
+            </Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Link
+              className="nav-link to-about"
+              to="about"
+              smooth
+              duration={700}
+              spy={true}
+              offset={-100}
+            >
+              <div>
+                <i className="fa fa-user nav-link__icon" />
+              </div>
+              {path2 || 'About1'}
+            </Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Link
+              className="nav-link to-projects"
+              to="projects"
+              smooth
+              duration={700}
+              spy={true}
+              offset={-100}
+            >
+              <div>
+                <i className="fa fa-file-code-o nav-link__icon" />
+              </div>
+              {path3 || 'Projects1'}
+            </Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Link
+              className="nav-link to-contact"
+              to="contact"
+              smooth
+              duration={700}
+              spy={true}
+              offset={-100}
+            >
+              <div>
+                <i className="fa fa-paper-plane nav-link__icon" />
+              </div>
+              {path4 || 'Contacts1'}
+            </Link>
+          </Nav.Item>
         <ButtonGroup className="nav-footer">
           <div className="social-links">
             {networks &&
@@ -131,7 +132,6 @@ const NavBar = () => {
                 );
               })}
           </div>
-
         </ButtonGroup>
       </Nav>
     </>

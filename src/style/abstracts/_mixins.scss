@@ -30,7 +30,7 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
   }
   // Phone
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
+    @media (max-width: 700px) {
       @content;
     } //0 - 600px
   }
@@ -65,7 +65,7 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
 // ----------- Mobile Menu Icons -------------- 
 
 @mixin menu-opener($height, $width, $top, $margin-left){
-  z-index: 5;
+  //z-index: 5;
   position: fixed;
   // display: flex;
   // flex-direction: column;

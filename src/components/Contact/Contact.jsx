@@ -9,6 +9,9 @@ const Contact = () => {
   const { contact } = useContext(PortfolioContext);
   const { cta, btn, email } = contact;
 
+  const { footer } = useContext(PortfolioContext);
+  const { networks } = footer;
+
   return (
     <section id="contact">
       <Container>
@@ -16,7 +19,7 @@ const Contact = () => {
         <Fade bottom duration={1000} delay={800} distance="30px">
           <div className="contact-wrapper">
             <p className="contact-wrapper__text">
-              {cta || 'Would you like to work with me? Awesome!'}
+              {cta || 'Wanna catch up?'}
             </p>
             <a
               target="_blank"
@@ -28,13 +31,26 @@ const Contact = () => {
             </a>
           </div>
 
-          <span className="back-to-top">
-            <Link to="hero" smooth duration={1000}>
-              <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
-            </Link>
-          </span>
         </Fade>
-
+        <Fade bottom duration={1000} delay={1000} distance="20px">
+          <div className="social-links--contact">
+            {networks &&
+              networks.map((network) => {
+                const { id, name, url } = network;
+                return (
+                  <a
+                    key={id}
+                    href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={name}
+                  >
+                    <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
+                  </a>
+                );
+              })}
+          </div>
+        </Fade>
       </Container>
     </section>
   );
