@@ -93,6 +93,10 @@
   }
 }
 
+.highlight{
+  color: $primary-color;
+}
+
 // Contains all the buttons below a project's description
 .proj-btns{
   display: flex;

@@ -37,7 +37,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'MiniClueTemp.png',
     title: 'Mini Clue',
-    info: 'In this version of Clue, the only sentient player is the user. Games consist of one player constantly making accusatory guesses in an attempt to narrow down the culprit and can last as short as a minute (or less). Any other players specified cannot play against the user... yet.',
+    info: 'This is a simplified, single-player version of the game Clue. Games consist of one player constantly making accusatory guesses in an attempt to narrow down the culprit and can last as short as a minute (or less). This project was built using <span class="highlight">ReactJS</span>.',
     info2: '',
     url: '', // url for live demo of project
     repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
